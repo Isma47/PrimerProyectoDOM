@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistemas de pago</title>
+    <link rel="stylesheet" href="dist/css/output.css" />
+</head>
+
+<body>
+    <!-- Inicio del header -->
+    <header class="flex items-center justify-evenly bg-blue-500 p-5 relative">
+        <h1 class="text-4xl font-black">Sistema de pago</h1>
+
+        <nav class="lg:flex gap-x-8 header-nav hidden">
+            <a href="" class="font-medium transition-colors duration-500 hover:text-white">Beneficiarios de tus
+                aportaciones</a>
+            <a href="" class="font-medium transition-colors duration-500 hover:text-white">Ayuda</a>
+            <a href="" class="font-medium transition-colors duration-500 hover:text-white">Politicas de privacidad</a>
+        </nav>
+
+        <img src="src/svg/menu-outline.svg" alt="" class="w-9 header-hamburguesa lg:hidden">
+    </header>
+
+    <!-- Sistema de pago -->
+    <main class="w-4/5 m-auto">
+        <form action="" class="m-auto my-14 lg:w-8/12 bg-blue-500 p-8 rounded-2xl">
+            <legend class="text-2xl font-bold text-center">Ingrese sus datos</legend>
+
+            <!-- Datos del cliente -->
+            <div class="my-5 flex gap-2 flex-col lg:flex-row">
+                <div>
+                    <label for="nombre" class="font-medium ">Nombre:</label>
+                    <input type="text" id="nombre" placeholder="Ingrese su nombre"
+                        class="bg-blue-500 placeholder-white" />
+                </div>
+
+                <div>
+                    <label for="apellido" class="font-medium">Apellidos:</label>
+                    <input type="text" id="apellido" placeholder="Ingrese sus apellidos"
+                        class="bg-blue-500 placeholder-white" />
+                </div>
+            </div>
+
+            <!-- Datos bancarios -->
+            <div class="flex flex-col gap-3">
+                <label for="numeroTargeta" class="font-medium">Numeros de su tarjeta:</label>
+                <input type="text" placeholder="55 79 *********" class="bg-blue-500 placeholder-white" id="numeroTarjeta" />
+
+                <div class="flex gap-3 lg:gap-x-10 flex-col lg:flex">
+                    <span>
+                        <label for="fecha" class="font-medium">Fecha de vencimiento:</label>
+                        <input type="date" id="fecha" class="bg-blue-500 placeholder-white" />
+                    </span>
+
+                    <span>
+                        <label for="ccv" class="font-medium">CVV:</label>
+                        <input type="text" maxlength="3" placeholder="Eje: 976" class="placeholder-white bg-blue-500" id="cvv"/>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Contacto -->
+            <div class="py-5 flex flex-col gap-y-2">
+                <label for="email" class="font-medium">Correo electronico:</label>
+                <input type="email" placeholder="Ingrese su correo electronico"
+                    class="bg-blue-500 text-white placeholder-white" id="email" />
+
+                <label for="telefono">Telefono:</label>
+                <input type="number" placeholder="Eje: 5534323453" class="bg-blue-500 text-white placeholder-white" id="telefono"/>
+
+                <label for="" class="font-medium">País:</label>
+                <select name="" id="" class="bg-blue-500">
+                    <option value="" class="font-medium" class="bg-blue-600 text-white ">México</option>
+                </select>
+
+                <label for="localidad" class="font-medium">Localidad:</label>
+                <input type="text" placeholder="Condado, acalndía..."
+                    class="bg-blue-500 text-white placeholder-white focus:border-blue-500" id="localidad" />
+            </div>
+        </form>
+
+        <div class=" flex justify-center gap-x-28 m-auto my-14 w-8/12 bg-blue-500 p-8 rounded-2xl">
+            <p class="font-bold bg-green-500 py-2 px-4 rounded-lg">Aceptar</p>
+            <p class="font-bold bg-red-500 py-2 px-4 rounded-lg">Reiniciar</p>
+        </div>
+    </main>
+
+
+    <script src="src/javascript/app.js"></script>
+</body>
+
+</html>
